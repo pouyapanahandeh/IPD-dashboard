@@ -28,6 +28,9 @@ function renderMarkets(data){
 function render(data){
  if(data.schema_version!==1||!Array.isArray(data.market_coverage)||!Array.isArray(data.included_entries_by_year))throw Error('Unsupported summary');
  set('review-date',date(data.review_date));set('sample-date',date(data.market_requested_through));
+ set('sample-years',data.market_requested_from.slice(0,4)+'–'+data.market_requested_through.slice(0,4));
+ const unavailable=data.market_coverage.filter(r=>!r.observations).map(r=>r.name);
+ set('market-coverage-note',number(data.summary.acquired_series)+' series were obtained.'+(unavailable.length?' Unavailable: '+unavailable.join(', ')+'.':''));
  set('observations',number(data.summary.market_observations));set('series-count',number(data.summary.acquired_series));set('events-count',number(data.summary.included_events));set('episodes-count',number(data.summary.included_episodes));set('reviewed-count',number(data.summary.distinct_dispositioned));
  set('queue-caption','Of '+number(data.summary.queue_total)+' retrieved records · includes deferrals');
  set('queue-total',number(data.summary.queue_total)+' retrieved records; '+number(data.summary.unreviewed)+' still unreviewed.');

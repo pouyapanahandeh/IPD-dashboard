@@ -2,6 +2,7 @@
   "schema_version": 1,
   "review_date": "2026-10-25",
   "market_snapshot": "20261024T135115Z",
+  "market_requested_from": "2000-01-01",
   "market_requested_through": "2026-10-23",
   "release_note": "Initial descriptive release. Event review is partial; no conflict probabilities are available.",
   "summary": {
