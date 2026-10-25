@@ -8,12 +8,13 @@
   ],
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "app.js": "cc5ae6c827e1f4e0e0ff32b1cd2177ba8c3860837a909fc5ed7c37aaeac92e5a",
-    "data.json": "246f5293b79d8621850238dff8e250c60e8ef94a1a6ae8c94d0d09dd9bdaea41",
-    "index.html": "363457dbdad0b6a1203aef7e433c8927dbde87ee75072864266dedaecb740768",
-    "style.css": "bc21c69a500bae0e729df915607d5e6725eb2c8023fbf534ec8cbb7eb185d7a5"
+    "app.js": "c748bea0ef062eb2ad565970e36f15aada421d483913f548522cb21b8448058f",
+    "data.json": "b444f464842fe3429e627be1d2cc6337e3e23fc0227e5ae0e24676e9e55207b4",
+    "index.html": "750563399292f79beafd5356892f1ebdd4f4bb78dc599433beff9f85874e1530",
+    "style.css": "b44ceb8953e37334f0a685ac070620fc93ecb2e33eb0e8a7960a472e116bae90"
   },
   "market_snapshot": "20261024T135115Z",
+  "release_id": "2026-10-25-fa-en-v2",
   "review_date": "2026-10-25",
   "schema_version": 1
 }
