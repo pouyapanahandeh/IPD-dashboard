@@ -9,6 +9,13 @@ const element=(tag,cls,text)=>{const e=document.createElement(tag);if(cls)e.clas
 const isFa=()=>language==='fa';
 const choose=(fa,en)=>isFa()?fa:en;
 const COPY={
+ 'IPD':'رصد','Iran Conflict':'رصدخانه ریسک','Risk Observatory':'درگیری ایران','Iran Conflict Risk Observatory':'رصدخانه ریسک درگیری ایران',
+ 'Follow the evidence.':'شواهد را دنبال کنید.','See what we know.':'دانسته‌ها را ببینید.',
+ 'A register, still taking shape.':'فهرستی که کامل‌تر می‌شود.','Included entries by year':'رویدادهای پذیرفته‌شده به تفکیک سال','Review queue':'صف بررسی',
+ 'Coverage before conclusions.':'پوشش داده، پیش از نتیجه‌گیری.','Observations by series':'مشاهدات هر مجموعه','Observed date spans':'بازه زمانی مشاهدات',
+ 'Evidence before prediction.':'شواهد، پیش از پیش‌بینی.','Clear limits.':'محدودیت‌های روشن.','Traceable progress.':'پیشرفت قابل پیگیری.',
+ 'What is included':'چه چیزی پوشش داده می‌شود؟','What is still unknown':'چه چیزهایی هنوز نامشخص‌اند؟','How weekly updates work':'به‌روزرسانی هفتگی چگونه است؟','Sources and attribution':'منابع و ارجاع',
+ 'Language':'زبان','Farsi':'فارسی','English':'انگلیسی','01':'۰۱','02':'۰۲','03':'۰۳','04':'۰۴',
  'Loading…':'در حال بارگذاری…','Skip to results':'رفتن به نتایج','Evidence':'شواهد','Market coverage':'پوشش بازارها','Method & updates':'روش و به‌روزرسانی',
  'DESCRIPTIVE RESEARCH':'پژوهش توصیفی','AN OPEN VIEW OF THE RESEARCH':'نگاهی شفاف به پژوهش',
  'A transparent record of Iran-linked conflict research and financial-market data coverage. Explore the collected evidence, the gaps, and the work still ahead.':'نمایی شفاف از پژوهش درباره درگیری‌های مرتبط با ایران و پوشش داده‌های بازارهای مالی. شواهد گردآوری‌شده، خلأهای داده و کارهای باقی‌مانده را ببینید.',
@@ -38,12 +45,12 @@ const COPY={
  'Historical event coverage, defensible negative windows, precise information availability and some source rights remain unresolved.':'پوشش تاریخی رویدادها، بازه‌های منفی قابل دفاع، زمان دقیق دسترسی به اطلاعات و بخشی از حقوق استفاده از منابع هنوز روشن نیست.',
  'No probabilities or trading signals are published.':'احتمال درگیری یا سیگنال معاملاتی منتشر نمی‌شود.',
  'A maintainer reviews the evidence and refreshes the approved summary, then manually publishes the page. There is no automatic weekly refresh. The review date and market sample date are shown separately.':'مسئول نگهداری، شواهد را بازبینی و خلاصه مجاز را به‌روز می‌کند؛ سپس صفحه را به‌صورت دستی منتشر می‌کند. به‌روزرسانی هفتگی خودکار نیست. تاریخ بازبینی و تاریخ نمونه بازار جداگانه نمایش داده می‌شوند.',
- 'Market metadata comes from saved FRED, Yahoo Finance and attempted TSETMC acquisitions. Review-queue summaries derive from':'اطلاعات پوشش بازار از دریافت‌های ذخیره‌شده FRED و Yahoo Finance و تلاش برای دریافت داده از TSETMC به دست آمده است. خلاصه صف بررسی برگرفته از',
- 'UCDP GED 26.1 and Candidate 2026 Q3':'UCDP GED 26.1 و Candidate سه‌ماهه سوم ۲۰۲۶',
- '(Uppsala Conflict Data Program, CC BY 4.0). Inclusion counts come from project curation, not an official UCDP conflict statistic.':'است (برنامه داده‌های درگیری اوپسالا، مجوز CC BY 4.0). شمارش رویدادهای پذیرفته‌شده حاصل بررسی پروژه است، نه آمار رسمی درگیری UCDP.',
+ 'Market metadata comes from saved FRED, Yahoo Finance and attempted TSETMC acquisitions. Review-queue summaries derive from':'اطلاعات پوشش بازار از دریافت‌های ذخیره‌شده پایگاه فرد و یاهو فایننس و تلاش برای دریافت داده از مدیریت فناوری بورس تهران به دست آمده است. خلاصه صف بررسی برگرفته از',
+ 'UCDP GED 26.1 and Candidate 2026 Q3':'داده‌های رویداد جغرافیایی اوپسالا نسخه ۲۶٫۱ و داده‌های مقدماتی سه‌ماهه سوم ۲۰۲۶',
+ '(Uppsala Conflict Data Program, CC BY 4.0). Inclusion counts come from project curation, not an official UCDP conflict statistic.':'است (برنامه داده‌های درگیری اوپسالا، مجوز کریتیو کامنز انتساب ۴٫۰). شمارش رویدادهای پذیرفته‌شده حاصل بررسی پروژه است، نه آمار رسمی درگیری برنامه اوپسالا.',
  'Underlying price data and full source documents are not redistributed here. This page does not establish rights to train on or republish those histories.':'داده‌های اصلی قیمت و متن کامل اسناد منابع در اینجا بازنشر نمی‌شوند. این صفحه مجوزی برای آموزش مدل یا بازنشر آن تاریخچه‌ها ایجاد نمی‌کند.',
  'Descriptive evidence. No forecast. Manually maintained.':'شواهد توصیفی. بدون پیش‌بینی. نگهداری دستی.','Back to top ↑':'بازگشت به بالا ↑',
- 'Enable JavaScript to view this dashboard’s summary charts. The':'برای دیدن نمودارها جاوااسکریپت را فعال کنید.','public summary JSON':'خلاصه عمومی JSON','is available without JavaScript.':'بدون جاوااسکریپت هم در دسترس است.'
+ 'Enable JavaScript to view this dashboard’s summary charts. The':'برای دیدن نمودارها جاوااسکریپت را فعال کنید.','public summary JSON':'خلاصه عمومی با قالب داده ساختاریافته','is available without JavaScript.':'بدون جاوااسکریپت هم در دسترس است.'
 };
 const EXTRA={
  'observation-caption':['تعداد واقعی مشاهدات دریافت‌شده؛ مقدارها روی نمودار نوشته شده‌اند.','Actual acquired observations, labelled directly on each bar.'],
@@ -54,14 +61,14 @@ const EXTRA={
  'readiness-caption':['این نما وضعیت آمادگی پژوهش را نشان می‌دهد؛ امتیاز ریسک یا احتمال درگیری نیست.','This view shows research readiness, not a risk score or conflict probability.']
 };
 const SERIES={
- sp500:['S&P 500','شاخص قیمت','پوشش منبع محدود به بازه چرخشی است؛ سه اختلاف بین توزیع‌کنندگان از تحلیل کنار گذاشته شده‌اند.'],
+ sp500:['اس‌اندپی ۵۰۰','شاخص قیمت','پوشش منبع محدود به بازه چرخشی است؛ سه اختلاف بین توزیع‌کنندگان از تحلیل کنار گذاشته شده‌اند.'],
  nasdaq:['نزدک کامپوزیت','شاخص قیمت','تاریخ محلی جلسات معاملاتی؛ خلأها و پرچم‌های کیفیت در داده پژوهشی باقی‌اند.'],
- vix:['VIX','شاخص نوسان','سطح این شاخص بیانگر نوسان مورد انتظار است، نه احتمال درگیری.'],
- brent:['نفت برنت','قیمت مرجع نقدی EIA','نمای عمومی فقط پوشش داده را نشان می‌دهد؛ شرایط استفاده از خدمات منبع همچنان نیازمند بررسی است.'],
- wti:['نفت WTI','قیمت مرجع نقدی EIA','مشاهده تاریخی قیمت منفی در پژوهش حفظ شده است؛ هیچ قیمتی در خروجی عمومی نیست.'],
+ vix:['وی‌آی‌ایکس','شاخص نوسان','سطح این شاخص بیانگر نوسان مورد انتظار است، نه احتمال درگیری.'],
+ brent:['نفت برنت','قیمت مرجع نقدی اداره اطلاعات انرژی آمریکا','نمای عمومی فقط پوشش داده را نشان می‌دهد؛ شرایط استفاده از خدمات منبع همچنان نیازمند بررسی است.'],
+ wti:['نفت دبلیوتی‌آی','قیمت مرجع نقدی اداره اطلاعات انرژی آمریکا','مشاهده تاریخی قیمت منفی در پژوهش حفظ شده است؛ هیچ قیمتی در خروجی عمومی نیست.'],
  gold:['آتی طلا','قرارداد آتی نزدیک به سررسید','این مجموعه جایگزین قیمت نقدی طلاست؛ حقوق انتشار منبع و بورس روشن نشده‌اند.'],
- global_equity:['سهام جهانی','قیمت پایانی صندوق ACWI','قیمت پایانی یک صندوق بورسی است، نه شاخص بازده کل جهانی.'],
- ta35:['شاخص اسرائیل TA-35 / TA-25','شامل شاخص پیشین TA-25','خلأ تاریخی منظم در یکشنبه‌ها؛ از ویژگی‌های استنباطی کنار گذاشته شده است.'],
+ global_equity:['سهام جهانی','قیمت پایانی صندوق آکویی','قیمت پایانی یک صندوق بورسی است، نه شاخص بازده کل جهانی.'],
+ ta35:['شاخص اسرائیل تی‌ای ۳۵ / تی‌ای ۲۵','شامل شاخص پیشین تی‌ای ۲۵','خلأ تاریخی منظم در یکشنبه‌ها؛ از ویژگی‌های استنباطی کنار گذاشته شده است.'],
  tedpix:['شاخص کل بورس تهران','شاخص قیمت و بازده نقدی','دریافت داده ممکن نشد؛ هیچ مشاهده‌ای ساخته یا جایگزین نشده است.']
 };
 const STATE={unreviewed:['بررسی‌نشده','Unreviewed'],defer:['تعویق · خلأ شواهد','Deferred · evidence gaps'],retain_provisional:['موقت · پذیرفته‌نشده','Provisional · not included'],include_new:['پیوند به رویداد پذیرفته‌شده جدید','Linked to new included entries'],match_existing:['تطبیق با رویداد موجود','Matched to existing entries'],exclude_scope:['خارج از تعریف رویداد','Outside the event target']};
@@ -71,7 +78,7 @@ function translateStatic(){
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
  while(walker.nextNode()){
   const node=walker.currentNode,parent=node.parentElement;
-  if(!parent||parent.closest('h1,h2,h3,.brand,.footer-brand,script,style,#language-select,[data-dynamic]'))continue;
+  if(!parent||parent.closest('script,style,[data-dynamic]'))continue;
   if(!originalText.has(node))originalText.set(node,node.textContent);
   const original=originalText.get(node),key=original.trim();
   if(COPY[key])node.textContent=isFa()?original.replace(key,COPY[key]):original;
@@ -79,7 +86,10 @@ function translateStatic(){
  for(const node of document.querySelectorAll('[data-copy]')){const values=EXTRA[node.dataset.copy];node.textContent=values[isFa()?0:1];}
  document.documentElement.lang=language;document.documentElement.dir=isFa()?'rtl':'ltr';
  document.getElementById('language-select').value=language;
- for(const h of document.querySelectorAll('h1,h2,h3,.brand,.footer-brand')){h.lang='en';h.dir='ltr';}
+ document.getElementById('language-select').setAttribute('aria-label',choose('زبان','Language'));
+ document.title=choose('رصدخانه ریسک درگیری ایران','IPD · Iran Conflict Risk Observatory');
+ document.querySelector('meta[name=description]').content=choose('رصدخانه ریسک درگیری ایران: شواهد، پوشش بازار و پیشرفت پژوهش با نمودارهای توصیفی.','Iran Conflict Risk Observatory: evidence, market coverage and research progress in descriptive charts.');
+ for(const h of document.querySelectorAll('h1,h2,h3,.brand,.footer-brand')){h.lang=language;h.dir=isFa()?'rtl':'ltr';}
  document.querySelector('.stats').setAttribute('aria-label',choose('نتایج پروژه','Project results'));
  document.getElementById('annual-chart').setAttribute('aria-label',choose('تعداد رویدادهای پذیرفته‌شده به تفکیک سال','Included entries by year'));
  document.querySelector('nav').setAttribute('aria-label',choose('پیمایش اصلی','Main navigation'));
