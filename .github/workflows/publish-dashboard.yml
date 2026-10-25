@@ -1,0 +1,41 @@
+name: Publish public dashboard (manual)
+on:
+  workflow_dispatch:
+permissions:
+  contents: read
+concurrency:
+  group: github-pages
+  cancel-in-progress: false
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify public release files and hashes
+        run: |
+          python3 - <<'PYCODE'
+          import hashlib,json
+          from pathlib import Path
+          folder=Path('site')
+          expected={'.nojekyll','index.html','style.css','app.js','data.json','release-manifest.json'}
+          assert {p.name for p in folder.iterdir()}==expected
+          assert all(p.is_file() and not p.is_symlink() for p in folder.iterdir())
+          manifest=json.loads((folder/'release-manifest.json').read_text())
+          assert set(manifest['files'])==expected-{'release-manifest.json'}
+          for name,digest in manifest['files'].items():
+              assert hashlib.sha256((folder/name).read_bytes()).hexdigest()==digest,name
+          payload=json.loads((folder/'data.json').read_text())
+          assert payload['forecast_available'] is False
+          PYCODE
+      - uses: actions/upload-pages-artifact@v3
+        with:
+          path: site
+      - name: Deploy the allowlisted artifact
+        id: deployment
+        uses: actions/deploy-pages@v4

@@ -1,0 +1,19 @@
+{
+  "content_scope": [
+    "project aggregate counts",
+    "partial register counts by year",
+    "review-state aggregate counts",
+    "market-series coverage metadata",
+    "project readiness limitations"
+  ],
+  "files": {
+    ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "app.js": "eb712905b45713ee6d7d01965722173721f014aa54ac95cf2c7d4b1d9c484014",
+    "data.json": "da71aa809f47603a32e3034295c40d169cd5e38c59c6af17a3bab03e3c0b63c2",
+    "index.html": "4e5085d8f0a9869ce4c1dd3b81331dee51f37b20833ee49d51a743d31835cad5",
+    "style.css": "bc21c69a500bae0e729df915607d5e6725eb2c8023fbf534ec8cbb7eb185d7a5"
+  },
+  "market_snapshot": "20261024T135115Z",
+  "review_date": "2026-10-25",
+  "schema_version": 1
+}

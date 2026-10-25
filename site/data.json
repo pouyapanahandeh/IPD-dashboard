@@ -1,0 +1,163 @@
+{
+  "schema_version": 1,
+  "review_date": "2026-10-25",
+  "market_snapshot": "20261024T135115Z",
+  "market_requested_through": "2026-10-23",
+  "release_note": "Initial descriptive release. Event review is partial; no conflict probabilities are available.",
+  "summary": {
+    "market_observations": 45401,
+    "acquired_series": 8,
+    "included_events": 30,
+    "included_episodes": 15,
+    "distinct_dispositioned": 40,
+    "queue_total": 1566,
+    "unreviewed": 1526,
+    "deferred": 17,
+    "provisional_events": 4
+  },
+  "review_state_counts": {
+    "defer": 17,
+    "exclude_scope": 1,
+    "include_new": 15,
+    "match_existing": 5,
+    "retain_provisional": 2,
+    "unreviewed": 1526
+  },
+  "included_entries_by_year": [
+    {
+      "year": 2001,
+      "entries": 1
+    },
+    {
+      "year": 2017,
+      "entries": 1
+    },
+    {
+      "year": 2018,
+      "entries": 3
+    },
+    {
+      "year": 2019,
+      "entries": 1
+    },
+    {
+      "year": 2020,
+      "entries": 2
+    },
+    {
+      "year": 2022,
+      "entries": 5
+    },
+    {
+      "year": 2024,
+      "entries": 7
+    },
+    {
+      "year": 2025,
+      "entries": 4
+    },
+    {
+      "year": 2026,
+      "entries": 6
+    }
+  ],
+  "market_coverage": [
+    {
+      "series_id": "sp500",
+      "name": "S&P 500",
+      "observations": 2512,
+      "first_session_date": "2016-10-24",
+      "last_session_date": "2026-10-21",
+      "analysis_excluded": false,
+      "proxy_note": "Price index",
+      "note": "Rolling source coverage; three distributor discrepancies are quarantined."
+    },
+    {
+      "series_id": "nasdaq",
+      "name": "Nasdaq Composite",
+      "observations": 6744,
+      "first_session_date": "2000-01-03",
+      "last_session_date": "2026-10-23",
+      "analysis_excluded": false,
+      "proxy_note": "Price index",
+      "note": "Local session dates; source gaps and quality flags remain in the research data."
+    },
+    {
+      "series_id": "vix",
+      "name": "VIX",
+      "observations": 6776,
+      "first_session_date": "2000-01-03",
+      "last_session_date": "2026-10-22",
+      "analysis_excluded": false,
+      "proxy_note": "Volatility index",
+      "note": "Index levels describe expected volatility, not conflict probability."
+    },
+    {
+      "series_id": "brent",
+      "name": "Brent crude oil",
+      "observations": 6491,
+      "first_session_date": "2000-01-04",
+      "last_session_date": "2026-10-20",
+      "analysis_excluded": false,
+      "proxy_note": "EIA spot reference",
+      "note": "Public view includes coverage metadata only; source-service terms still require review."
+    },
+    {
+      "series_id": "wti",
+      "name": "WTI crude oil",
+      "observations": 6342,
+      "first_session_date": "2000-01-04",
+      "last_session_date": "2026-10-20",
+      "analysis_excluded": false,
+      "proxy_note": "EIA spot reference",
+      "note": "Negative historical price observation retained in research; no price values exported."
+    },
+    {
+      "series_id": "gold",
+      "name": "Gold futures",
+      "observations": 6563,
+      "first_session_date": "2000-08-30",
+      "last_session_date": "2026-10-23",
+      "analysis_excluded": false,
+      "proxy_note": "Front-contract futures proxy",
+      "note": "Futures proxy, not spot gold. Source and exchange publication rights unresolved."
+    },
+    {
+      "series_id": "global_equity",
+      "name": "Global equities",
+      "observations": 4674,
+      "first_session_date": "2008-03-28",
+      "last_session_date": "2026-10-23",
+      "analysis_excluded": false,
+      "proxy_note": "ACWI ETF close proxy",
+      "note": "ETF market close, not a global total-return index."
+    },
+    {
+      "series_id": "ta35",
+      "name": "Israeli TA-35 / TA-25",
+      "observations": 5299,
+      "first_session_date": "2000-01-03",
+      "last_session_date": "2026-10-23",
+      "analysis_excluded": true,
+      "proxy_note": "Historical TA-25 predecessor included",
+      "note": "Systematic historical Sunday gaps; excluded from inferential features."
+    },
+    {
+      "series_id": "tedpix",
+      "name": "Iran TEDPIX",
+      "observations": 0,
+      "first_session_date": null,
+      "last_session_date": null,
+      "analysis_excluded": true,
+      "proxy_note": "Tehran total price & dividend index",
+      "note": "Acquisition unavailable; no observations invented or substituted."
+    }
+  ],
+  "forecast_available": false,
+  "limitations": [
+    "Partial curation; missing events and years do not mean no conflict.",
+    "No negative labels or historically verified information availability.",
+    "No raw prices, return features or source documents in this release."
+  ],
+  "rights_basis": "This limited release contains project-created summaries and coverage metadata; it does not grant or assume redistribution rights for the underlying market histories or source documents. Existing research data remain private."
+}
