@@ -17,3 +17,6 @@ html[lang=fa] h1,html[lang=fa] h2{font-family:Georgia,Tahoma,serif;letter-spacin
 @media(max-width:700px){.brand{width:min(300px,100%)}header{gap:12px}.language-control{margin-inline-start:auto}}
 
 .brand img{display:block;width:100%;height:auto}
+.legacy-panel{margin-top:20px}.legacy-chart{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:18px;margin:24px 0}.legacy-group{min-width:0;padding:16px;border:1px solid var(--line);background:var(--paper)}.legacy-group h4{font-size:16px;margin:0 0 18px}.legacy-group .bar-row{grid-template-columns:92px minmax(0,1fr) 24px;gap:6px}.legacy-group .bar-label{font-size:9px}.legacy-hit{font-size:11px;margin:16px 0 0;color:var(--muted)}details summary{cursor:pointer;font-size:12px;font-weight:600;margin:20px 0}
+@media(max-width:1000px){.legacy-chart{grid-template-columns:1fr}.legacy-group .bar-row{grid-template-columns:120px minmax(0,1fr) 30px}}
+@media(max-width:700px){.legacy-group .bar-row{grid-template-columns:90px minmax(0,1fr) 24px}}

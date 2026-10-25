@@ -16,7 +16,7 @@ const COPY={
  'Evidence before prediction.':'شواهد، پیش از پیش‌بینی.','Clear limits.':'محدودیت‌های روشن.','Traceable progress.':'پیشرفت قابل پیگیری.',
  'What is included':'چه چیزی پوشش داده می‌شود؟','What is still unknown':'چه چیزهایی هنوز نامشخص‌اند؟','How weekly updates work':'به‌روزرسانی هفتگی چگونه است؟','Sources and attribution':'منابع و ارجاع',
  'Language':'زبان','Farsi':'فارسی','English':'انگلیسی','01':'۰۱','02':'۰۲','03':'۰۳','04':'۰۴',
- 'Loading…':'در حال بارگذاری…','Skip to results':'رفتن به نتایج','Evidence':'شواهد','Market coverage':'پوشش بازارها','Method & updates':'روش و به‌روزرسانی',
+ 'Forecasts':'پیش‌بینی‌ها','HISTORICAL RESEARCH':'پژوهش تاریخی','Forecasts & backtest':'پیش‌بینی‌ها و آزمون گذشته','Recovered experiment':'آزمایش بازیابی‌شده','Logistic comparator':'مدل مقایسه‌ای لجستیک','Market-stress benchmark':'معیار تنش بازار','Loading…':'در حال بارگذاری…','Skip to results':'رفتن به نتایج','Evidence':'شواهد','Market coverage':'پوشش بازارها','Method & updates':'روش و به‌روزرسانی',
  'DESCRIPTIVE RESEARCH':'پژوهش توصیفی','AN OPEN VIEW OF THE RESEARCH':'نگاهی شفاف به پژوهش',
  'A transparent record of Iran-linked conflict research and financial-market data coverage. Explore the collected evidence, the gaps, and the work still ahead.':'نمایی شفاف از پژوهش درباره درگیری‌های مرتبط با ایران و پوشش داده‌های بازارهای مالی. شواهد گردآوری‌شده، خلأهای داده و کارهای باقی‌مانده را ببینید.',
  'Explore the results':'دیدن نتایج','How to read this page →':'راهنمای خواندن این صفحه ←','CURRENT RESEARCH SNAPSHOT':'وضعیت فعلی پژوهش',
@@ -53,6 +53,15 @@ const COPY={
  'Enable JavaScript to view this dashboard’s summary charts. The':'برای دیدن نمودارها جاوااسکریپت را فعال کنید.','public summary JSON':'خلاصه عمومی با قالب داده ساختاریافته','is available without JavaScript.':'بدون جاوااسکریپت هم در دسترس است.'
 };
 const EXTRA={
+ 'legacy-intro':['خروجی آزمایش قبلی بازیابی شد. در این بخش می‌بینید مدل در گذشته چه هشدارهایی داده و چند مورد درست یا اشتباه بوده‌اند.','The earlier experiment has been recovered. This section shows the warnings it issued historically and how many were true or false.'],
+ 'current-forecast-title':['پیش‌بینی امروز: تولید نشده است.','Current forecast: not produced.'],
+ 'current-forecast-note':['خروجی تاریخی زیر برآورد ریسک امروز یا روزهای آینده نیست. هنوز پیش‌بینی معتبر جاری نداریم.','The historical results below are not estimates of today’s or future risk. No validated current forecast is available.'],
+ 'legacy-model-label':['مدل آزمایشی','Experimental model'],
+ 'legacy-target':['هدف آزمایش: آغاز سه دوره تشدید مستقیم درگیری ایران و اسرائیل. این تعریف با فهرست گسترده‌تر رویدادهای فعلی متفاوت است.','Experimental target: three direct Iran–Israel escalation episode starts. This differs from the current, broader event register.'],
+ 'legacy-notifications':['در هر افق، تعداد اعلان‌های درست و اشتباه و دوره‌های تشخیص‌داده‌شده نشان داده می‌شود. اعلان‌ها پس از فاصله انتظار صادر می‌شدند؛ تعداد روزهای هشدار در جدول جداگانه است. «اشتباه» یعنی رویدادی مطابق تعریف محدود آن آزمایش ثبت نشده، نه اینکه هیچ درگیری‌ای وجود نداشته است.','Each horizon shows true/false notifications and episodes detected. Notifications used a cooldown; warning-day counts are separate below. “False” means no event under that experiment’s narrow target, not absence of all conflict.'],
+ 'legacy-days-title':['جزئیات روزهای هشدار در آزمون تاریخی','Historical warning-day detail'],
+ 'legacy-horizon':['افق','Horizon'],'legacy-true-days':['روز هشدار درست','True warning days'],'legacy-false-days':['روز هشدار اشتباه','False warning days'],'legacy-missed-days':['روز مثبت بدون هشدار','Missed positive days'],'legacy-negative-days':['روز منفی بدون هشدار','True negative days'],
+ 'legacy-limits':['آزمایش بازسازی‌شده گذشته‌نگر با داده‌های تا پایان ۲۰۲۵ و فقط سه دوره آزمون است. نمره لجستیک احتمال کالیبره‌شده جنگ نیست؛ تأخیر هفت‌روزه جای زمان انتشار تاریخی تأییدشده را نمی‌گیرد. مدل‌ها پیش‌بینی قابل اتکا نشان ندادند. هیچ مدل تازه‌ای برای این صفحه آموزش داده نشده است.','This retrospective reconstruction uses data ending in 2025 and only three test episodes. Balanced logistic scores are not calibrated war probabilities; a seven-day lag is not verified historical availability. The models did not demonstrate reliable forecasting. No new model was trained for this page.'],
  'observation-caption':['تعداد واقعی مشاهدات دریافت‌شده؛ مقدارها روی نمودار نوشته شده‌اند.','Actual acquired observations, labelled directly on each bar.'],
  'observation-note':['طول میله‌ها تعداد مشاهدات را نشان می‌دهد، نه بازده یا کیفیت بازار. تفاوت تقویم معاملاتی و تاریخ شروع بر این تعداد اثر دارد.','Bar length shows observation counts, not returns or market quality. Trading calendars and start dates affect these counts.'],
  'span-caption':['سال آغاز و پایان مشاهده برای هر مجموعه','First and last observed years for each series'],
@@ -139,6 +148,22 @@ function renderReadiness(){
  const rows=[['پوشش رویدادها','Event coverage','ناقص','Incomplete'],['بازه‌های منفی تأییدشده','Verified negative windows','در دسترس نیست','Unavailable'],['زمان دسترسی تاریخی','Historical availability','تأیید نشده','Not established'],['حقوق استفاده برای مدل','Model-use rights','روشن نشده','Unresolved'],['داوری مستقل رویدادها','Independent review','انجام نشده','Not completed'],['احتمال درگیری','Conflict probability','منتشر نمی‌شود','Not published']];
  for(const row of rows){const card=element('div','readiness-card');card.append(element('span','',row[isFa()?0:1]),element('strong','',row[isFa()?2:3]));grid.append(card);}
 }
+
+function renderLegacy(data){
+ const section=document.getElementById('forecasts'),legacy=data.legacy_backtest;
+ section.hidden=!legacy;if(!legacy)return;
+ set('legacy-dates',choose('آزمون: ','Test: ')+date(legacy.test_start)+choose(' تا ',' to ')+date(legacy.test_end)+choose(' · اجرای اصلی: ',' · Original run: ')+date(legacy.run_date));
+ const model=document.getElementById('legacy-model').value,rows=legacy.results.filter(r=>r.model===model);
+ const chart=document.getElementById('legacy-chart'),table=document.getElementById('legacy-days');chart.replaceChildren();table.replaceChildren();
+ const max=Math.max(1,...rows.flatMap(r=>[r.true_notifications,r.false_notifications]));
+ for(const r of rows){const group=element('article','legacy-group');group.append(element('h4','',number(r.horizon_days)+choose(' روز',' days')));
+ group.append(labeledBar(choose('اعلان درست','True notifications'),r.true_notifications,max,'#267b70'),labeledBar(choose('اعلان اشتباه','False notifications'),r.false_notifications,max,'#b95630'));
+ // A zero here is a measured experimental count, unlike an unreviewed event year.
+ for(const z of group.querySelectorAll('.zero-label'))z.textContent=number(0);
+ group.append(element('p','legacy-hit',choose('دوره‌های تشخیص‌داده‌شده: ','Episodes detected: ')+number(r.events_hit)+choose(' از ',' of ')+number(r.events_eligible)));chart.append(group);
+ const tr=element('tr');for(const key of ['horizon_days','true_warning_days','false_warning_days','missed_positive_days','true_negative_days'])tr.append(element('td','',number(r[key])));table.append(tr);}
+}
+
 function render(data){
  if(data.schema_version!==1||!Array.isArray(data.market_coverage)||!Array.isArray(data.included_entries_by_year))throw Error('Unsupported summary');
  set('review-date',date(data.review_date));set('sample-date',date(data.market_requested_through));
@@ -163,13 +188,14 @@ function render(data){
   if(count){const segment=element('div');segment.style.width=(100*count/data.summary.queue_total)+'%';segment.style.background=colors[state];if(count/data.summary.queue_total>.2)segment.textContent=labels[isFa()?0:1]+' · '+number(count);bar.append(segment);}
   const row=element('div','legend-row'),name=element('span'),swatch=element('i','swatch');swatch.style.background=colors[state];name.append(swatch,document.createTextNode(labels[isFa()?0:1]));row.append(name,element('b','',number(count)));legend.append(row);
  }
- renderYears(data);renderMarkets(data);renderMarketVisuals(data);renderReadiness();
+ renderYears(data);renderMarkets(data);renderMarketVisuals(data);renderReadiness();renderLegacy(data);
 }
 // Dynamic regions are regenerated on language change; do not cache their translated text nodes.
-for(const id of ['annual-chart','market-table','market-count-chart','span-chart','queue-bar','queue-legend','review-ring','review-ratio','readiness-grid','review-date','sample-date','sample-years','market-coverage-note','observations','series-count','events-count','episodes-count','reviewed-count','queue-caption','queue-total','pending-note','release-note','freshness'])document.getElementById(id).dataset.dynamic='true';
+for(const id of ['legacy-chart','legacy-days','legacy-dates','annual-chart','market-table','market-count-chart','span-chart','queue-bar','queue-legend','review-ring','review-ratio','readiness-grid','review-date','sample-date','sample-years','market-coverage-note','observations','series-count','events-count','episodes-count','reviewed-count','queue-caption','queue-total','pending-note','release-note','freshness'])document.getElementById(id).dataset.dynamic='true';
 function changeLanguage(value){language=value;try{localStorage.setItem('ipd-language',value);}catch{}translateStatic();if(dashboard)render(dashboard);}
 translateStatic();
 document.getElementById('language-select').addEventListener('change',e=>changeLanguage(e.target.value));
+document.getElementById('legacy-model').addEventListener('change',()=>{if(dashboard)renderLegacy(dashboard);});
 document.getElementById('year-filter').addEventListener('change',()=>{if(dashboard)renderYears(dashboard);});
 document.getElementById('market-filter').addEventListener('change',()=>{if(dashboard)renderMarkets(dashboard);});
 fetch('data.json',{cache:'no-store'}).then(r=>{if(!r.ok)throw Error('Summary unavailable');return r.json();}).then(data=>{dashboard=data;render(data);}).catch(()=>{document.getElementById('load-error').hidden=false;set('review-date',choose('در دسترس نیست','Unavailable'));set('sample-date',choose('در دسترس نیست','Unavailable'));});

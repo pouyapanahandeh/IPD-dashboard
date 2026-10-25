@@ -4,17 +4,18 @@
     "partial register counts by year",
     "review-state aggregate counts",
     "market-series coverage metadata",
-    "project readiness limitations"
+    "project readiness limitations",
+    "aggregate evaluation counts from the recovered historical 2023\u20132025 experimental backtest; no current forecast or score export"
   ],
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "app.js": "fcaac645179c3b00ca2302c7781d25b3ac1db099f9642523cb051e8a09c42360",
-    "data.json": "b444f464842fe3429e627be1d2cc6337e3e23fc0227e5ae0e24676e9e55207b4",
-    "index.html": "20a08becc2b33b79817f651eec076cae16580741c3050db3330f4f04c0f76e22",
-    "style.css": "9392cf14fee2a7c4865453a4c306bcc7ede20c26312ec836f6cee951493ae229"
+    "app.js": "e1e858d748bcc1014ce3206cd000e31b7ff0232eac6dd1de5561f980abf87c09",
+    "data.json": "f79e5b03a13fccd71f469ad268e108b88725f356693edda03aea3343cde60e66",
+    "index.html": "75d0c85cd34374ddd1e6026614cb0fb8fc945052c63fb5af3179b30bd34102fd",
+    "style.css": "6cb3abc8475f70e1ec07f33a1bb5ad2402241c95a3bbb96303f413994a8b83c8"
   },
   "market_snapshot": "20261024T135115Z",
-  "release_id": "2026-10-25-reference-brand-v4",
+  "release_id": "2026-10-25-legacy-backtest-v5",
   "review_date": "2026-10-25",
   "schema_version": 1
 }
