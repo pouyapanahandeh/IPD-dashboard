@@ -78,7 +78,7 @@ function translateStatic(){
  const walker=document.createTreeWalker(document.body,NodeFilter.SHOW_TEXT);
  while(walker.nextNode()){
   const node=walker.currentNode,parent=node.parentElement;
-  if(!parent||parent.closest('script,style,[data-dynamic]'))continue;
+  if(!parent||parent.closest('script,style,.brand,.footer-brand,[data-dynamic]'))continue;
   if(!originalText.has(node))originalText.set(node,node.textContent);
   const original=originalText.get(node),key=original.trim();
   if(COPY[key])node.textContent=isFa()?original.replace(key,COPY[key]):original;
@@ -89,9 +89,10 @@ function translateStatic(){
  document.getElementById('language-select').setAttribute('aria-label',choose('زبان','Language'));
  document.title=choose('رصدخانه ریسک درگیری ایران','IPD · Iran Conflict Risk Observatory');
  document.querySelector('meta[name=description]').content=choose('رصدخانه ریسک درگیری ایران: شواهد، پوشش بازار و پیشرفت پژوهش با نمودارهای توصیفی.','Iran Conflict Risk Observatory: evidence, market coverage and research progress in descriptive charts.');
- for(const h of document.querySelectorAll('h1,h2,h3,.brand,.footer-brand')){h.lang=language;h.dir=isFa()?'rtl':'ltr';}
+ for(const h of document.querySelectorAll('h1,h2,h3')){h.lang=language;h.dir=isFa()?'rtl':'ltr';}
  document.querySelector('.stats').setAttribute('aria-label',choose('نتایج پروژه','Project results'));
  document.getElementById('annual-chart').setAttribute('aria-label',choose('تعداد رویدادهای پذیرفته‌شده به تفکیک سال','Included entries by year'));
+ for(const brand of document.querySelectorAll('.brand,.footer-brand')){brand.lang='en';brand.dir='ltr';}
  document.querySelector('nav').setAttribute('aria-label',choose('پیمایش اصلی','Main navigation'));
 }
 function seriesText(r,index){return isFa()?SERIES[r.series_id][index]:[r.name,r.proxy_note,r.note][index];}

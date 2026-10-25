@@ -8,13 +8,13 @@
   ],
   "files": {
     ".nojekyll": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
-    "app.js": "73d80602be7002702daf780bb897e14882d27f9b8816666d6c585fa12f549208",
+    "app.js": "fcaac645179c3b00ca2302c7781d25b3ac1db099f9642523cb051e8a09c42360",
     "data.json": "b444f464842fe3429e627be1d2cc6337e3e23fc0227e5ae0e24676e9e55207b4",
-    "index.html": "86cb7bf460c346a75ff01c6baa7f03baec6341fbf113b0f116001c94f8343c13",
-    "style.css": "9bd66e06fa278cda2b1da31b0bcad3fb459d3dd93de6b95820cbed13a1942ad3"
+    "index.html": "20a08becc2b33b79817f651eec076cae16580741c3050db3330f4f04c0f76e22",
+    "style.css": "9392cf14fee2a7c4865453a4c306bcc7ede20c26312ec836f6cee951493ae229"
   },
   "market_snapshot": "20261024T135115Z",
-  "release_id": "2026-10-25-complete-locales-v3",
+  "release_id": "2026-10-25-reference-brand-v4",
   "review_date": "2026-10-25",
   "schema_version": 1
 }
